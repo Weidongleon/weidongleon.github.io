@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>
+  try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<title>梁维栋 Dr James Weidong Liang</title>
+<meta name="description" content="梁维栋（Dr James Weidong Liang）——生物医学工程师、转化研究者与创业者，常驻伦敦，致力于把医疗 AI 与影像引导技术从实验室带到临床。">
+<meta property="og:title" content="梁维栋 Dr James Weidong Liang">
+<meta property="og:description" content="生物医学工程师 · 创始人 · 伦敦。可信赖牙科 AI 与超声引导针尖追踪。">
+<meta property="og:image" content="https://weidongleon.github.io/assets/james.jpg">
+<meta property="og:url" content="https://weidongleon.github.io/index.zh.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://weidongleon.github.io/index.zh.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%233d6b5a' stroke-width='7' stroke-linecap='round' stroke-dasharray='120 30'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f2eb;
+    --paper: #fbf9f4;
+    --ink: #232b27;
+    --muted: #687068;
+    --faint: #b9bab2;
+    --line: #e2ddd2;
+    --sage: #3d6b5a;
+    --sage-soft: #e6ebe3;
+    --clay: #a8845a;
+    --pulse-k: 1;
+    --shot-filter: none;
+    --photo-filter: saturate(.85);
+    --shadow-c: rgba(40,50,40,.25);
+    --bezel: #232b27;
+    --grain: .05;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141715; --paper: #1a1e1b; --ink: #e6e4dd; --muted: #9ba19b; --faint: #4d534e;
+      --line: #2a302c; --sage: #8fbca7; --sage-soft: #1f2b25; --clay: #cfa878;
+      --pulse-k: 1.6; --shot-filter: brightness(.86) contrast(1.04); --photo-filter: saturate(.8) brightness(.92); --shadow-c: rgba(0,0,0,.55); --bezel: #39413c; --grain: .07;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141715; --paper: #1a1e1b; --ink: #e6e4dd; --muted: #9ba19b; --faint: #4d534e;
+    --line: #2a302c; --sage: #8fbca7; --sage-soft: #1f2b25; --clay: #cfa878;
+    --pulse-k: 1.6; --shot-filter: brightness(.86) contrast(1.04); --photo-filter: saturate(.8) brightness(.92); --shadow-c: rgba(0,0,0,.55); --bezel: #39413c; --grain: .07;
+  }
+  :root[data-theme="light"] { color-scheme: light; }
+  :root[data-theme="dark"] { color-scheme: dark; }
+  body, header.nav, .scan, .spiral-fig, .card, .gate { transition: background-color .5s ease, color .5s ease, border-color .5s ease; }
+  .shots img, .portrait img { filter: var(--shot-filter); transition: filter .5s ease; }
+  .portrait img { filter: var(--photo-filter); }
+
+  /* Theme switch */
+  .theme-btn { flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: none; color: var(--muted); cursor: pointer; display: grid; place-items: center; transition: color .3s, border-color .3s; }
+  .theme-btn:hover { color: var(--ink); border-color: var(--faint); }
+  .theme-btn svg { width: 16px; height: 16px; }
+  .theme-btn [data-icon] { display: none; }
+  .theme-btn[data-mode="auto"] [data-icon="auto"], .theme-btn[data-mode="light"] [data-icon="light"], .theme-btn[data-mode="dark"] [data-icon="dark"] { display: block; }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+  ::selection { background: var(--sage-soft); color: var(--ink); }
+  h1, h2, h3, .about p.big, .why-intro p.big, .lead { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 100; opacity: var(--grain); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 300 16px/1.75 Inter, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: Newsreader, Georgia, serif; font-weight: 300; margin: 0; line-height: 1.15; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 32px; }
+  .label { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+  .link { border-bottom: 1px solid var(--faint); padding-bottom: 1px; transition: border-color .3s, color .3s; }
+  .link:hover { border-color: var(--sage); color: var(--sage); }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 1.1s ease, transform 1.1s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* Nav */
+  header.nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(8px); }
+  header.nav .wrap { display: flex; align-items: center; height: 60px; gap: 24px; }
+  .brand { font-family: Newsreader, Georgia, serif; font-size: 18px; white-space: nowrap; }
+  nav { margin-left: auto; display: flex; gap: 28px; overflow-x: auto; scrollbar-width: none; }
+  nav::-webkit-scrollbar { display: none; }
+  nav a { font-size: 13px; color: var(--muted); white-space: nowrap; transition: color .3s; }
+  nav a:hover, nav a.active { color: var(--ink); }
+
+  /* Hero */
+  .hero { min-height: calc(100vh - 60px); display: flex; align-items: center; padding: 64px 0 96px; }
+  .hero .wrap { display: grid; grid-template-columns: 1fr 220px; gap: 72px; align-items: center; width: 100%; }
+  .hero h1 { font-size: clamp(44px, 7vw, 76px); letter-spacing: -.015em; margin: 22px 0 28px; }
+  .hero h1 .zh-name { display: block; margin-top: 14px; font-family: "Songti TC", "Noto Serif TC", "Source Han Serif TC", "Noto Serif CJK TC", "PMingLiU", "MingLiU", "Songti SC", serif; font-size: .42em; font-weight: 400; letter-spacing: .32em; color: var(--muted); }
+  .hero .lead { font-family: Newsreader, Georgia, serif; font-size: clamp(20px, 2.4vw, 25px); line-height: 1.5; max-width: 26em; margin: 0 0 32px; }
+  .roles { list-style: none; padding: 0; margin: 0 0 44px; font-size: 14px; color: var(--muted); }
+  .roles li { padding: 3px 0; }
+  .roles b { font-weight: 400; color: var(--ink); }
+  .actions { display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 14px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border: 1px solid var(--ink); border-radius: 999px; font: inherit; color: var(--ink); background: none; cursor: pointer; transition: background .3s, color .3s; }
+  .btn:hover { background: var(--ink); color: var(--bg); }
+  .portrait { position: relative; }
+  .portrait img { width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center 22%; border-radius: 50%; }
+  .enso { position: absolute; inset: -18px; width: calc(100% + 36px); height: calc(100% + 36px); pointer-events: none; }
+  .enso circle { fill: none; stroke: var(--sage); stroke-width: 1.4; stroke-linecap: round; stroke-dasharray: 640; stroke-dashoffset: 640; transform: rotate(-70deg); transform-origin: center; animation: draw 3.2s cubic-bezier(.6,.05,.3,1) .4s forwards; opacity: .7; }
+  @keyframes draw { to { stroke-dashoffset: 70; } }
+
+  /* About */
+  .about { max-width: 60ch; }
+  .about p { margin: 0 0 20px; color: var(--muted); }
+  .about p.big { font-family: Newsreader, Georgia, serif; font-size: clamp(21px, 2.3vw, 26px); line-height: 1.5; color: var(--ink); margin-bottom: 26px; }
+  .about p:last-child { margin-bottom: 0; }
+
+  /* Sections */
+  section.block { padding: 120px 0; }
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 64px; border-top: 1px solid var(--line); padding-top: 28px; }
+  .sec-head h2 { font-size: clamp(30px, 4vw, 40px); }
+
+  /* Ventures */
+  .ventures { list-style: none; padding: 0; margin: 0; }
+  .venture { display: grid; grid-template-columns: 64px 1fr minmax(190px, auto); gap: 32px; padding: 34px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .venture:first-child { padding-top: 0; }
+  .venture .n { font-family: Newsreader, serif; color: var(--faint); font-size: 18px; }
+  .venture h3 { font-size: 27px; margin-bottom: 6px; }
+  .venture p { margin: 0; color: var(--muted); max-width: 34em; }
+  .venture .meta { text-align: right; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; letter-spacing: .02em; line-height: 1.5; }
+  .venture .meta b { display: block; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: 18px; line-height: 1.25; letter-spacing: 0; color: var(--ink); margin-bottom: 4px; }
+  .venture .meta b:not(:first-of-type) { margin-top: 16px; }
+  .fig { font-family: Newsreader, serif; color: var(--ink); }
+
+
+  /* Products */
+  .product { display: grid; grid-template-columns: 1fr; gap: 28px; margin-bottom: 96px; }
+  .product-head { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; }
+  .product h3 { font-size: 34px; }
+  .product h3 .zh { font-size: .8em; color: var(--muted); margin-left: 10px; letter-spacing: .1em; }
+  .product p { margin: 0; color: var(--muted); }
+  .shots { position: relative; padding-bottom: 40px; }
+  .shots .desk { width: 86%; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 30px 60px -30px var(--shadow-c); display: block; }
+  .shots .phone { position: absolute; right: 0; bottom: 0; width: 22%; border-radius: 22px; border: 6px solid var(--bezel); box-shadow: 0 30px 50px -20px var(--shadow-c); }
+  .shots.single .desk { width: 100%; }
+  .shot-placeholder { aspect-ratio: 16/9; border: 1px dashed var(--faint); border-radius: 10px; display: grid; place-items: center; color: var(--muted); font-size: 13px; background: var(--paper); }
+  .small-projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; border-top: 1px solid var(--line); padding-top: 40px; }
+  .small-projects h4 { font-family: Newsreader, serif; font-weight: 400; font-size: 21px; margin: 6px 0 6px; }
+  .small-projects p { margin: 0; color: var(--muted); font-size: 14px; }
+  .tagline { color: var(--sage); font-size: 13px; }
+
+  /* Research */
+  .research { display: grid; grid-template-columns: 1fr 1.25fr; gap: 64px; align-items: center; }
+  .research .copy p { margin: 0 0 18px; color: var(--muted); }
+  .research .copy p.big { font-family: Newsreader, serif; font-size: 23px; line-height: 1.45; color: var(--ink); }
+  .scan { position: relative; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .scan svg { display: block; width: 100%; height: auto; }
+  .scan .readout { position: absolute; left: 18px; bottom: 14px; font: 400 11px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--muted); letter-spacing: .04em; }
+  .scan .readout b { color: var(--sage); font-weight: 500; }
+  .pubs { list-style: none; padding: 0; margin: 56px 0 0; }
+  .pubs li { display: grid; grid-template-columns: 1fr auto; gap: 24px; padding: 18px 0; border-top: 1px solid var(--line); font-size: 15px; }
+  .pubs li span:last-child { color: var(--muted); font-size: 13px; white-space: nowrap; }
+
+  .spiral-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 88px; }
+  .spiral-fig { margin: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; position: relative; overflow: hidden; }
+  .spiral-fig svg { display: block; width: 100%; height: auto; }
+  .spiral-fig .readout { position: absolute; left: 18px; bottom: 14px; font: 400 11px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--muted); letter-spacing: .04em; }
+  .spiral-fig .readout b { color: var(--sage); font-weight: 500; }
+  .spiral-copy .label { display: block; margin-bottom: 14px; }
+  .spiral-copy h3 { font-size: 28px; margin-bottom: 16px; }
+  .spiral-copy p { color: var(--muted); margin: 0 0 16px; }
+  .spiral-copy .eq { font-family: Newsreader, serif; font-style: italic; font-size: 20px; color: var(--ink); margin: 22px 0; letter-spacing: .02em; }
+  .legend { list-style: none; padding: 0; margin: 22px 0 0; font-size: 13px; color: var(--muted); display: grid; gap: 8px; }
+  .legend i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 10px; vertical-align: middle; }
+
+  /* Recognition & path */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
+  .rows { list-style: none; padding: 0; margin: 0; }
+  .rows li { display: grid; grid-template-columns: 64px 1fr; gap: 16px; padding: 14px 0; border-top: 1px solid var(--line); font-size: 15px; }
+  .rows li .y { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; padding-top: 2px; }
+  .rows li small { display: block; color: var(--muted); font-size: 13px; }
+
+  /* Contact */
+  .contact { text-align: center; padding: 160px 0 140px; }
+  .contact h2 { font-size: clamp(34px, 5vw, 52px); margin: 18px 0 22px; }
+  .contact p { color: var(--muted); max-width: 30em; margin: 0 auto 40px; }
+  .contact .actions { justify-content: center; }
+  footer { padding: 28px 0 40px; font-size: 12px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 24px; }
+
+  /* CV gate */
+  dialog { border: none; padding: 0; background: transparent; max-width: calc(100vw - 32px); }
+  dialog::backdrop { background: rgba(20,24,22,.45); backdrop-filter: blur(4px); }
+  .gate { width: 380px; max-width: 100%; background: var(--paper); color: var(--ink); border-radius: 18px; padding: 40px 36px 32px; text-align: center; }
+  .gate h3 { font-size: 28px; margin: 12px 0 10px; }
+  .gate p { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+  .hold { position: relative; width: 132px; height: 132px; margin: 0 auto 20px; border-radius: 50%; border: none; background: none; cursor: pointer; color: var(--ink); font: 400 13px Inter, sans-serif; touch-action: none; -webkit-user-select: none; user-select: none; }
+  .hold svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+  .hold .track { fill: none; stroke: var(--line); stroke-width: 2; }
+  .hold .prog { fill: none; stroke: var(--sage); stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 377; stroke-dashoffset: 377; }
+  .hold:focus-visible { outline: 2px solid var(--sage); outline-offset: 4px; }
+  .gate .status { min-height: 20px; font-size: 13px; color: var(--sage); margin-bottom: 18px; }
+  .gate .alt { font-size: 13px; color: var(--muted); }
+  .gate .close { margin-top: 18px; background: none; border: none; color: var(--muted); font: inherit; font-size: 13px; cursor: pointer; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+  /* About + roles radar */
+  .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 52px; align-items: start; }
+  .roles-fig { margin: 0; position: sticky; top: 92px; text-align: center; }
+  #roles { display: block; width: 100%; height: auto; overflow: visible; }
+  #roles .orbit { fill: none; stroke: var(--sage); stroke-width: 1.1; stroke-opacity: .4; stroke-linecap: round; }
+  #roles .orbit2 { fill: none; stroke: var(--faint); stroke-width: 1; stroke-dasharray: 1 7; stroke-linecap: round; stroke-opacity: .6; }
+  #roles .link { fill: none; stroke: var(--sage); stroke-width: 1; stroke-opacity: .55; }
+  #roles .pulse { fill: var(--clay); }
+  #roles .bub { fill: var(--paper); stroke: var(--sage); stroke-width: 1.1; stroke-opacity: .85; }
+  #roles .bub-in { fill: none; stroke: var(--line); stroke-width: 1; }
+  #roles .ring { fill: none; stroke: var(--clay); stroke-width: 1; }
+  #roles .b1 { fill: var(--ink); font-family: Newsreader, Georgia, serif; font-size: 14px; }
+  #roles .b2 { fill: var(--muted); font-family: Inter, system-ui, sans-serif; font-size: 7.5px; letter-spacing: .16em; }
+  #roles .me { fill: none; stroke: var(--ink); stroke-width: 1.1; stroke-opacity: .7; }
+  #roles { --c-skin: #fbf6ee; --c-ink: #2a302c; --c-cloth: #fbf9f4; --c-hood: #e3e9e1; --c-hair-edge: transparent; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #roles { --c-skin: #e9e2d6; --c-cloth: #d9d4c8; --c-hood: #b8c7bb; --c-hair-edge: rgba(230,228,221,.35); } }
+  :root[data-theme="dark"] #roles { --c-skin: #e9e2d6; --c-cloth: #d9d4c8; --c-hood: #b8c7bb; --c-hair-edge: rgba(230,228,221,.35); }
+  #roles .c-bg { fill: var(--sage-soft); }
+  #roles .c-skin { fill: var(--c-skin); stroke: var(--c-ink); stroke-width: 1.2; stroke-linejoin: round; }
+  #roles .c-body, #roles .c-coat, #roles .c-shirt { fill: var(--c-cloth); stroke: var(--c-ink); stroke-width: 1.2; stroke-linejoin: round; }
+  #roles .c-hair { fill: var(--c-ink); stroke: var(--c-hair-edge); stroke-width: .9; }
+  #roles .c-line, #roles .c-glass { fill: none; stroke: var(--c-ink); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+  #roles .c-faint { fill: none; stroke: var(--c-ink); stroke-opacity: .35; stroke-width: 1; stroke-linecap: round; }
+  #roles .c-blush { fill: var(--clay); opacity: .3; }
+  #roles .c-hat { fill: var(--clay); stroke: var(--c-ink); stroke-width: 1.2; stroke-linejoin: round; }
+  #roles .c-strap { fill: none; stroke: var(--sage); stroke-width: 2.2; stroke-linecap: round; }
+  #roles .c-acc, #roles .c-acc path, #roles .c-acc circle { fill: none; stroke: var(--sage); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+  #roles .c-steth { fill: none; stroke: var(--clay); stroke-width: 1.5; stroke-linecap: round; }
+  #roles .c-band { fill: none; stroke: var(--sage); stroke-width: 1.6; }
+  #roles .c-goggle { fill: var(--c-hood); stroke: var(--sage); stroke-width: 1.3; }
+  #roles .c-suit { fill: var(--sage); stroke: var(--c-ink); stroke-width: 1.2; stroke-linejoin: round; }
+  #roles .c-tie { fill: var(--clay); }
+  #roles .c-lan { fill: none; stroke: var(--clay); stroke-width: 1.2; stroke-linecap: round; }
+  #roles .c-badge { fill: var(--c-cloth); stroke: var(--c-ink); stroke-width: 1; }
+  #roles .c-hood { fill: var(--c-hood); stroke: var(--c-ink); stroke-width: 1.2; stroke-linejoin: round; }
+  #roles .c-net path { fill: none; stroke: var(--sage); stroke-width: 1.1; stroke-linejoin: round; }
+  #roles .c-net circle { fill: var(--paper); stroke: var(--sage); stroke-width: 1.1; }
+  #roles .c-net .c-node { fill: var(--clay); stroke: none; }
+  #roles .me-ring { fill: none; stroke: var(--sage); stroke-width: 1; }
+  .roles-fig figcaption { font-style: italic; letter-spacing: .01em; }
+  .roles-fig figcaption { font-family: Newsreader, Georgia, serif; color: var(--muted); font-size: 14px; margin-top: 6px; }
+
+  /* Why me: bridge story */
+  .why-intro { max-width: 62ch; }
+  .why-intro p { margin: 0 0 18px; color: var(--muted); }
+  .why-intro p.big { font-family: Newsreader, Georgia, serif; font-size: clamp(21px, 2.3vw, 26px); line-height: 1.5; color: var(--ink); margin-bottom: 22px; }
+  .bridge-fig { margin: 48px 0 0; }
+  #bridge { display: block; width: 100%; height: auto; overflow: visible; }
+  #bridge text { font-family: Newsreader, Georgia, serif; }
+  #bridge .cap { fill: var(--ink); font-style: italic; font-size: 21px; letter-spacing: .005em; }
+  #bridge .emb { fill: none; stroke: var(--ink); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  #bridge .endlabel { fill: var(--ink); font-size: 18px; }
+  #bridge .endsub { fill: var(--muted); font-style: italic; font-size: 14px; }
+  #bridge .mist { fill: url(#mist); }
+  #bridge .mist0 { stop-color: var(--sage); stop-opacity: 0; }
+  #bridge .mist1 { stop-color: var(--sage); stop-opacity: .14; }
+  #bridge .valley { fill: none; stroke: var(--muted); stroke-width: 1.1; stroke-dasharray: 2 6; stroke-linecap: round; stroke-opacity: .8; }
+  #bridge .gaplabel { fill: var(--muted); font-style: italic; font-size: 15px; letter-spacing: .02em; }
+  #bridge .span { fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-linecap: round; }
+  #bridge .stone { fill: var(--paper); stroke: var(--sage); stroke-width: 1.5; }
+  #bridge .stone-dot, #bridge .stone-glow { fill: var(--sage); }
+  #bridge .steplabel { fill: var(--muted); font-style: italic; font-size: 13.5px; }
+  #bridge .idea, #bridge .idea-glow, #bridge .clinic-glow { fill: var(--clay); }
+  #bridge .splash { fill: none; stroke: var(--clay); stroke-width: 1.1; }
+  #bridge .me-head { fill: var(--paper); stroke: var(--ink); stroke-width: 1.5; }
+  #bridge .me-body { fill: none; stroke: var(--ink); stroke-width: 1.5; stroke-linecap: round; }
+
+  @media (max-width: 820px) {
+    .wrap { padding: 0 24px; }
+    .hero { min-height: auto; padding: 48px 0 80px; }
+    .hero .wrap, .research, .two-col, .product-head { grid-template-columns: 1fr; gap: 40px; }
+    .portrait { width: 150px; order: -1; margin: 18px 0 0 18px; }
+    section.block { padding: 80px 0; }
+    .venture { grid-template-columns: 36px 1fr; }
+    .venture .meta { grid-column: 2; text-align: left; }
+    .small-projects { grid-template-columns: 1fr; gap: 28px; }
+    .spiral-panel { grid-template-columns: 1fr; gap: 36px; margin-top: 64px; }
+    .sec-head { margin-bottom: 44px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .roles-fig { position: static; max-width: 360px; width: 100%; margin: 0 auto; }
+    .bridge-fig { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    #bridge { min-width: 720px; }
+  }
+  @media (max-width: 560px) {
+    .wrap { padding: 0 16px; }
+    nav { gap: 18px; }
+    .shots .phone { width: 30%; border-width: 4px; border-radius: 14px; }
+    .shots .desk { width: 92%; }
+    .pubs li { grid-template-columns: 1fr; gap: 4px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .enso circle { animation: none; stroke-dashoffset: 70; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">James Liang</a>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#building">Building</a>
+      <a href="#making">Making</a>
+      <a href="#research">Research</a>
+      <a href="#why">Why me</a>
+      <a href="#path">Path</a>
+      <a href="#contact">Contact</a>
+      <a href="index.html" aria-label="English version" style="color:var(--sage);font-weight:500">EN</a> <a href="index.zh.html" aria-current="page" style="color:var(--ink)">中</a>
+    </nav>
+    <button class="theme-btn" id="theme-btn" type="button" data-mode="auto" aria-label="主题：跟随系统。点击切换。">
+      <svg data-icon="auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+      <svg data-icon="light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg data-icon="dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="label">生物医学工程师 · 创始人 · 伦敦</div>
+      <h1>Dr James Weidong Liang<span class="zh-name" lang="zh-Hans">梁维栋</span></h1>
+      <p class="lead">我把医学研究转化为人们能用的东西——从光纤针尖追踪，到可信赖的牙科 AI。</p>
+      <ul class="roles">
+        <li><b>可信赖牙科 AI 博士后</b>，Centre for Oral, Clinical & Translational Sciences，Guy’s Hospital，伦敦国王学院</li>
+        <li><b>创始人</b>，DeepTech Founders’ Club · OYSS UK</li>
+        <li><b>生物医学工程与影像科学博士</b>，St Thomas’ Hospital，伦敦国王学院</li>
+        <li><b>医疗器械设计与创业研究型硕士（MRes）</b>，<a class="link" href="https://www.imperial.ac.uk/study/courses/postgraduate-taught/medical-device-design/" target="_blank" rel="noopener">帝国理工学院</a></li>
+        <li><b>机械工程工学学士</b>，伯明翰大学</li>
+      </ul>
+      <div class="actions">
+        <button class="btn" type="button" data-cv>索取简历</button>
+        <a class="link" href="https://www.linkedin.com/in/weidong-liang-0715111a3/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="link" href="mailto:james.liang.sser@gmail.com">邮箱</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="assets/james.jpg" alt="Dr James Weidong Liang 的肖像">
+      <svg class="enso" viewBox="0 0 220 220" aria-hidden="true"><circle cx="110" cy="110" r="104"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>About</h2><span class="label">简述</span></div>
+    <div class="about-grid">
+    <div class="about reveal">
+      <p class="big">我是梁维栋（James），一名生物医学工程师，现为伦敦国王学院 Translational AI Research (TAIR) Lab 的博士后研究员。</p>
+      <p>我目前的工作聚焦于开发可信赖的 AI 工具，帮助牙医审阅临床记录、发现记录中的缺漏并提升记录质量。我与临床医生和 AI 研究者密切合作，把临床指南、专家反馈和以用户为中心的设计结合起来，打造契合日常牙科诊疗的工具。</p>
+      <p>我的研究兴趣涵盖医疗 AI、生物医学影像、影像引导介入以及医疗器械研发。我尤其关注如何把工程研究转化为解决临床问题的实用方案，将技术开发与临床评估、创业连接起来。</p>
+      <p>我在伦敦国王学院的<a class="link" href="https://www.kcl.ac.uk/bmeis" target="_blank" rel="noopener">生物医学工程</a>博士研究，聚焦于用于影像引导手术的三维容积超声成像与光纤针尖追踪，导师为 <a class="link" href="https://www.kcl.ac.uk/people/wenfeng-xia" target="_blank" rel="noopener">Dr Wenfeng Xia</a> 与 <a class="link" href="https://www.kcl.ac.uk/people/sebastien-ourselin" target="_blank" rel="noopener">Professor Sebastien Ourselin FREng</a>。</p>
+      <p>我拥有帝国理工学院的<a class="link" href="https://www.imperial.ac.uk/study/courses/postgraduate-taught/medical-device-design/" target="_blank" rel="noopener">医疗器械设计与创业</a>研究型硕士（MRes）学位，导师为 <a class="link" href="https://profiles.imperial.ac.uk/d.farina" target="_blank" rel="noopener">Professor Dario Farina</a> 与 <a class="link" href="https://profiles.imperial.ac.uk/james.moore.jr" target="_blank" rel="noopener">Professor James Moore Jr</a>；并以一等荣誉获得伯明翰大学机械工程工学学士学位，导师为 Professor Duc Truong Pham OBE, FREng。</p>
+    </div>
+    <figure class="roles-fig reveal" aria-label="一幅线条卡通：James 立于中心，在周围五个相连的身份间切换装束：机械工程师、生物医学工程师、创业者与创始人、转化研究者、AI 研究者。">
+      <svg id="roles" viewBox="0 0 380 336" role="img">
+        <defs><clipPath id="me-clip"><circle cx="0" cy="0" r="41"/></clipPath></defs>
+        <g><animateTransform attributeName="transform" type="rotate" from="0 190 172" to="360 190 172" dur="120s" repeatCount="indefinite"/>
+          <circle class="orbit" cx="190" cy="172" r="120" pathLength="100" stroke-dasharray="90 10"/>
+          <circle class="orbit2" cx="190" cy="172" r="142"/>
+        </g>
+        <path class="link" d="M190.0 124.0 L190.0 103.0" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" from="1" to="0" begin="0.15s" dur="0.6s" fill="freeze"/></path><path class="link" d="M235.7 157.2 L255.6 150.7" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" from="1" to="0" begin="0.85s" dur="0.6s" fill="freeze"/></path><path class="link" d="M218.2 210.8 L230.6 227.8" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" from="1" to="0" begin="1.55s" dur="0.6s" fill="freeze"/></path><path class="link" d="M161.8 210.8 L149.4 227.8" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" from="1" to="0" begin="2.25s" dur="0.6s" fill="freeze"/></path><path class="link" d="M144.3 157.2 L124.4 150.7" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" from="1" to="0" begin="2.95s" dur="0.6s" fill="freeze"/></path>
+        <circle class="me-ring" cx="190" cy="172" r="47" opacity=".5"><animate attributeName="r" values="45;55;45" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".5;0;.5" dur="5s" repeatCount="indefinite"/></circle>
+        <g transform="translate(190,172)"><g clip-path="url(#me-clip)"><circle class="c-bg" cx="0" cy="0" r="41"/><path class="c-body" d="M-31 46 C-31 27 -19 19 0 19 C19 19 31 27 31 46 Z"/><path class="c-skin" d="M-5 9 V20 H5 V9 Z"/><g opacity="1"><animate attributeName="opacity" begin="3.7s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.024;.2;.224;1"/><path class="c-strap" d="M-12 21 V46 M12 21 V46"/><path class="c-hat" d="M-16.5 -10 C-16.5 -29 16.5 -29 16.5 -10 Z"/><path class="c-line" d="M-20 -10 H20"/><path class="c-faint" d="M0 -26 V-11"/><g class="c-acc"><path d="M22 30 L30 22"/><circle cx="31.5" cy="20.5" r="3"/></g></g><g opacity="0"><animate attributeName="opacity" begin="6.2s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.024;.2;.224;1"/><path class="c-coat" d="M-31 46 C-31 27 -19 19 -7 19 L0 33 L7 19 C19 19 31 27 31 46 Z"/><path class="c-line" d="M-7 19 L0 33 L7 19"/><path class="c-steth" d="M-9 20 C-13 32 -5 38 2 37 C7 36 9 32 8 28"/><circle class="c-steth" cx="8" cy="26" r="2.6"/><path class="c-band" d="M-15 -11 H15"/><circle class="c-goggle" cx="-6" cy="-12" r="4.2"/><circle class="c-goggle" cx="6" cy="-12" r="4.2"/></g><g opacity="0"><animate attributeName="opacity" begin="8.7s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.024;.2;.224;1"/><path class="c-suit" d="M-31 46 C-31 27 -19 19 -6 19 L0 31 L6 19 C19 19 31 27 31 46 Z"/><path class="c-shirt" d="M-6 19 L0 31 L6 19 Z"/><path class="c-tie" d="M0 21.5 L-2.3 24.5 L0 34 L2.3 24.5 Z"/><g class="c-acc"><path d="M22 -20 L30 -28 M25 -28 H30 V-23"/></g></g><g opacity="0"><animate attributeName="opacity" begin="11.2s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.024;.2;.224;1"/><path class="c-coat" d="M-31 46 C-31 27 -19 19 -7 19 L0 33 L7 19 C19 19 31 27 31 46 Z"/><path class="c-line" d="M-7 19 L0 33 L7 19"/><path class="c-lan" d="M-9 20 L-2 34 M9 20 L2 34"/><rect class="c-badge" x="-4.5" y="34" width="9" height="10" rx="1.2"/><path class="c-lan" d="M0 36.5 V41.5 M-2.5 39 H2.5"/><path class="c-acc" d="M14 -24 Q21 -30 28 -24 M16 -26 V-22.5 M21 -28 V-23.5 M26 -26 V-22.5"/></g><g opacity="0"><animate attributeName="opacity" begin="13.7s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.024;.2;.224;1"/><path class="c-hood" d="M-31 46 C-31 27 -19 19 0 19 C19 19 31 27 31 46 Z"/><path class="c-line" d="M-9 20 Q0 27 9 20"/><path class="c-faint" d="M-4 24 V33 M4 24 V33"/><circle class="c-glass" cx="-5.6" cy="-2" r="4.6"/><circle class="c-glass" cx="5.6" cy="-2" r="4.6"/><path class="c-line" d="M-1 -2 H1"/><g class="c-net"><path d="M16 -18 L23 -25 L29 -16 L16 -18 M23 -25 L23 -31"/><circle cx="16" cy="-18" r="1.8"/><circle cx="23" cy="-25" r="1.8"/><circle cx="29" cy="-16" r="1.8"/><circle class="c-node" cx="23" cy="-31" r="2"/></g></g><path class="c-skin" d="M-15.5 -2 Q-19 -2 -18 2 Q-17 6 -14 5"/><path class="c-skin" d="M15.5 -2 Q19 -2 18 2 Q17 6 14 5"/><ellipse class="c-skin" cx="0" cy="-3" rx="14.5" ry="15.5"/><path class="c-hair" d="M-15 -4 C-16.5 -19 -8 -24 1 -23.5 C10 -23 16.5 -17 15 -5 C13 -10 9 -13.5 3 -14 C-2 -12 -7 -14.5 -10 -12 C-12.5 -10 -14 -7 -15 -4 Z"/><path class="c-line" d="M-7.5 -1.5 Q-5.2 -4 -3 -1.5"/><path class="c-line" d="M3 -1.5 Q5.2 -4 7.5 -1.5"/><path class="c-line" d="M-4 5 Q0 8.5 4 5"/><circle class="c-blush" cx="-9" cy="3" r="2.2"/><circle class="c-blush" cx="9" cy="3" r="2.2"/><g opacity="1"><animate attributeName="opacity" begin="3.7s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.024;.2;.224;1"/><path class="c-hat" d="M-16.5 -10 C-16.5 -29 16.5 -29 16.5 -10 Z"/><path class="c-line" d="M-20 -10 H20"/><path class="c-faint" d="M0 -26 V-11"/></g><g opacity="0"><animate attributeName="opacity" begin="6.2s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.024;.2;.224;1"/><path class="c-band" d="M-15 -11 H15"/><circle class="c-goggle" cx="-6" cy="-12" r="4.2"/><circle class="c-goggle" cx="6" cy="-12" r="4.2"/></g><g opacity="0"><animate attributeName="opacity" begin="13.7s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.024;.2;.224;1"/><circle class="c-glass" cx="-5.6" cy="-2" r="4.6"/><circle class="c-glass" cx="5.6" cy="-2" r="4.6"/><path class="c-line" d="M-1 -2 H1"/></g></g></g>
+        <circle class="me" cx="190" cy="172" r="41"/>
+        <circle class="pulse" r="2.3" opacity="0"><animateMotion path="M190.0 124.0 L190.0 103.0" begin="4.0s" dur="12.5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.064;1" calcMode="spline" keySplines=".4 0 .6 1;0 0 1 1"/><animate attributeName="opacity" begin="4.0s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.01;.058;.072;1"/></circle><circle class="pulse" r="2.3" opacity="0"><animateMotion path="M235.7 157.2 L255.6 150.7" begin="6.5s" dur="12.5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.064;1" calcMode="spline" keySplines=".4 0 .6 1;0 0 1 1"/><animate attributeName="opacity" begin="6.5s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.01;.058;.072;1"/></circle><circle class="pulse" r="2.3" opacity="0"><animateMotion path="M218.2 210.8 L230.6 227.8" begin="9.0s" dur="12.5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.064;1" calcMode="spline" keySplines=".4 0 .6 1;0 0 1 1"/><animate attributeName="opacity" begin="9.0s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.01;.058;.072;1"/></circle><circle class="pulse" r="2.3" opacity="0"><animateMotion path="M161.8 210.8 L149.4 227.8" begin="11.5s" dur="12.5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.064;1" calcMode="spline" keySplines=".4 0 .6 1;0 0 1 1"/><animate attributeName="opacity" begin="11.5s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.01;.058;.072;1"/></circle><circle class="pulse" r="2.3" opacity="0"><animateMotion path="M144.3 157.2 L124.4 150.7" begin="14.0s" dur="12.5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.064;1" calcMode="spline" keySplines=".4 0 .6 1;0 0 1 1"/><animate attributeName="opacity" begin="14.0s" dur="12.5s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.01;.058;.072;1"/></circle>
+        <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.50s" dur="0.8s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="6.5s" begin="0.50s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/><circle class="ring" cx="190.0" cy="52.0" r="52" opacity="0"><animate attributeName="opacity" begin="4.0s" dur="12.5s" repeatCount="indefinite" values="0;0;.75;.75;0;0" keyTimes="0;.06;.09;.19;.215;1"/></circle><circle class="bub" cx="190.0" cy="52.0" r="0"><animate attributeName="r" values="0;49;46" keyTimes="0;.7;1" begin="0.50s" dur="0.7s" fill="freeze"/></circle><circle class="bub-in" cx="190.0" cy="52.0" r="41"/><text class="b1" x="190.0" y="53.0" text-anchor="middle">机械</text><text class="b2" x="190.0" y="68.0" text-anchor="middle">工程师</text></g><g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.20s" dur="0.8s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="7.4s" begin="1.20s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/><circle class="ring" cx="304.1" cy="134.9" r="52" opacity="0"><animate attributeName="opacity" begin="6.5s" dur="12.5s" repeatCount="indefinite" values="0;0;.75;.75;0;0" keyTimes="0;.06;.09;.19;.215;1"/></circle><circle class="bub" cx="304.1" cy="134.9" r="0"><animate attributeName="r" values="0;49;46" keyTimes="0;.7;1" begin="1.20s" dur="0.7s" fill="freeze"/></circle><circle class="bub-in" cx="304.1" cy="134.9" r="41"/><text class="b1" x="304.1" y="135.9" text-anchor="middle">生物医学</text><text class="b2" x="304.1" y="150.9" text-anchor="middle">工程师</text></g><g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.90s" dur="0.8s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="8.3s" begin="1.90s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/><circle class="ring" cx="260.5" cy="269.1" r="52" opacity="0"><animate attributeName="opacity" begin="9.0s" dur="12.5s" repeatCount="indefinite" values="0;0;.75;.75;0;0" keyTimes="0;.06;.09;.19;.215;1"/></circle><circle class="bub" cx="260.5" cy="269.1" r="0"><animate attributeName="r" values="0;49;46" keyTimes="0;.7;1" begin="1.90s" dur="0.7s" fill="freeze"/></circle><circle class="bub-in" cx="260.5" cy="269.1" r="41"/><text class="b1" x="260.5" y="270.1" text-anchor="middle">创业者</text><text class="b2" x="260.5" y="285.1" text-anchor="middle">与创始人</text></g><g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.60s" dur="0.8s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="9.2s" begin="2.60s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/><circle class="ring" cx="119.5" cy="269.1" r="52" opacity="0"><animate attributeName="opacity" begin="11.5s" dur="12.5s" repeatCount="indefinite" values="0;0;.75;.75;0;0" keyTimes="0;.06;.09;.19;.215;1"/></circle><circle class="bub" cx="119.5" cy="269.1" r="0"><animate attributeName="r" values="0;49;46" keyTimes="0;.7;1" begin="2.60s" dur="0.7s" fill="freeze"/></circle><circle class="bub-in" cx="119.5" cy="269.1" r="41"/><text class="b1" x="119.5" y="270.1" text-anchor="middle">转化</text><text class="b2" x="119.5" y="285.1" text-anchor="middle">研究者</text></g><g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3.30s" dur="0.8s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="10.1s" begin="3.30s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/><circle class="ring" cx="75.9" cy="134.9" r="52" opacity="0"><animate attributeName="opacity" begin="14.0s" dur="12.5s" repeatCount="indefinite" values="0;0;.75;.75;0;0" keyTimes="0;.06;.09;.19;.215;1"/></circle><circle class="bub" cx="75.9" cy="134.9" r="0"><animate attributeName="r" values="0;49;46" keyTimes="0;.7;1" begin="3.30s" dur="0.7s" fill="freeze"/></circle><circle class="bub-in" cx="75.9" cy="134.9" r="41"/><text class="b1" x="75.9" y="135.9" text-anchor="middle">AI</text><text class="b2" x="75.9" y="150.9" text-anchor="middle">研究者</text></g>
+      </svg>
+      <figcaption>五种身份，一条主线。</figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Building -->
+<section class="block" id="building">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Building</h2><span class="label">创业与社群</span></div>
+    <ol class="ventures">
+      <li class="venture reveal">
+        <span class="n">01</span>
+        <div>
+          <h3>Translational AI Research (TAIR) Lab</h3>
+          <p>在伦敦国王学院的 <a class="link" href="https://www.kcl.ac.uk/dentistry/research/centre-for-oral-clinical-translational-sciences" target="_blank" rel="noopener">Centre for Oral, Clinical &amp; Translational Sciences</a>（COCTS），我开发可信赖的 AI，帮助牙医审阅临床记录、发现记录缺漏并提升记录质量——以“软件即医疗器械”（SaMD）的形式交付，并与临床医生和 AI 研究者协作。</p>
+        </div>
+        <div class="meta"><b>博士后研究员</b>2026年7月 – 至今</div>
+      </li>
+      <li class="venture reveal">
+        <span class="n">02</span>
+        <div>
+          <h3><a class="link" href="https://www.linkedin.com/company/beacon-surgical/" target="_blank" rel="noopener">Beacon Surgical Ltd.</a></h3>
+          <p>一家医疗器械公司，是伦敦国王学院的准衰生企业，基于我的博士研究开发超声引导的光纤针尖追踪技术。我负责战略、融资、产品开发与临床转化。</p>
+        </div>
+        <div class="meta"><b>联合创始人兼 CEO</b>2025年9月 – 2026年7月</div>
+      </li>
+      <li class="venture reveal">
+        <span class="n">03</span>
+        <div>
+          <h3>DeepTech Founders’ Club</h3>
+          <p>我在 Outstanding Young Scholars Society (OYSS) UK 下创办了 DeepTech Founders’ Club。OYSS 是一个由在英华人学者与创业者组成的社团，由 University of Warwick 负责东亚及东南亚事务的副常务副校长 <a class="link" href="https://warwick.ac.uk/fac/sci/eng/people/sai_gu/" target="_blank" rel="noopener">Prof Sai Gu FREng</a> 领导。该俱乐部汇聚了 <span class="fig">3,000+</span> 名研究者、创始人、投资人与产业伙伴，助力让更多深科技走出高校。</p>
+        </div>
+        <div class="meta"><b>创始人</b>2026 – 至今<b style="margin-top:10px">OYSS 伦敦分会副主席</b>2025 – 至今</div>
+      </li>
+      <li class="venture reveal">
+        <span class="n">04</span>
+        <div>
+          <h3>Takumi Hand</h3>
+          <p>帝国理工学院的一家衰生公司，开发可穿戴机器人手，如今名为 <a class="link" href="https://neubond.co.uk/" target="_blank" rel="noopener">Neubond</a>。它打造可负担、易获取的神经康复技术，把康复训练带入中风康复者的日常生活。它源自我的 MRes，也是我的第一个创业项目：我做了市场调研与商业计划，并进行了路演。</p>
+        </div>
+        <div class="meta"><b>学生衰生公司 CEO</b>2020 – 2021</div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Making -->
+<section class="block" id="making">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Making</h2><span class="label">产品</span></div>
+
+    <article class="product">
+      <div class="product-head reveal">
+        <div>
+          <div class="label">个人产品 · 2026</div>
+          <h3 style="margin-top:10px">善终<span class="zh">Good Die</span></h3>
+        </div>
+        <p>一个平静的空间，让你在为时已晚之前说出最重要的话：心愿、写给挚爱之人的信，以及你所信任的人——一步一个小小的脚印。</p>
+      </div>
+      <div class="shots reveal">
+        <img class="desk" src="assets/gooddie-desktop.jpg" alt="善终 桌面端：今天页面，带有温和的提示和一份关怀计划" loading="lazy">
+        <img class="phone" src="assets/gooddie-phone.jpg" alt="善终 手机端：今天界面" loading="lazy">
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="product-head reveal">
+        <div>
+          <div class="label">可信赖牙科 AI · Guy’s Hospital，伦敦国王学院 · 开发中</div>
+          <h3 style="margin-top:10px">临床记录自审 AI</h3>
+        </div>
+        <p>帮助牙科临床医生自查记录中缺漏与风险的 AI，与临床医生及产业伙伴共同开发，以“软件即医疗器械”（SaMD）形式交付。更多内容即将分享。</p>
+      </div>
+    </article>
+
+    <div class="small-projects reveal">
+      <div>
+        <div class="label">2026</div>
+        <h4>Mind the Gap</h4>
+        <p>AI + AR，为出院后的中风患者提供支持。</p>
+        <span class="tagline">Cambridge RealityX · 赛道冠军</span>
+      </div>
+      <div>
+        <div class="label">2026</div>
+        <h4>GELEMO</h4>
+        <p>一个 AI 生成音乐平台。</p>
+      </div>
+      <div>
+        <div class="label">2022</div>
+        <h4>5AMer</h4>
+        <p>一个为早起者打造的互助社群。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research -->
+<section class="block" id="research">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Research</h2><span class="label">博士 · St Thomas’ Hospital，伦敦国王学院</span></div>
+    <div class="research">
+      <div class="copy reveal">
+        <p class="big">一枚能告诉扫描仪自己位置的针。</p>
+        <p>我在 School of Biomedical Engineering & Imaging Sciences 的博士研究解决了一个简单的问题：在超声下，针尖很容易“看丢”。我制作了置于针内、与探头通信的光纤换能器，从而能在容积图像上实时、三维地定位针尖。</p>
+        <p>我在股神经阻滩模拟器上验证了该系统——这是迈向更安全区域麻醉的一步——随后联合创办 Beacon Surgical，推动它走向临床。</p>
+      </div>
+      <figure class="scan reveal" style="margin:0" aria-label="动画：一枚针穿过组织前进，针尖发出超声脉冲，被探头阵列接收，实时定位针尖">
+        <svg id="scan" viewBox="0 0 600 380"></svg>
+        <div class="readout" id="readout">追踪 · <b>x 0.0 mm</b> · <b>深度 0.0 mm</b></div>
+      </figure>
+    </div>
+    <div class="spiral-panel">
+      <figure class="spiral-fig reveal" aria-label="动画：布置在费马螺线上的 256 个接收阵元，在来自针尖的超声脉冲到达时依次点亮">
+        <svg id="spiral" viewBox="0 0 440 440"></svg>
+        <div class="readout" id="spiral-readout">256 个阵元 · 黄金角 <b>137.5°</b></div>
+      </figure>
+      <div class="spiral-copy reveal">
+        <span class="label">概念 · 稀疏矩阵阵列</span>
+        <h3>用 256 个点聆听</h3>
+        <p>二维矩阵探头有成千上万个阵元。要以少得多的通道实现三维成像与追踪，可将有效阵元布置在费马螺线上，每个相对上一个旋转一个黄金角。</p>
+        <div class="eq">r<sub>n</sub> = a√n, &nbsp; θ<sub>n</sub> = n · 137.5°</div>
+        <p>这种布局均匀覆盖孔径却从不重复，从而抑制栅瓣。当针尖发出脉冲时，每个阵元接收到它的时间略有不同，这些时延便可在三维中精确定位针尖。</p>
+        <ul class="legend">
+          <li><i style="background:var(--faint)"></i>空闲阵元</li>
+          <li><i style="background:var(--sage)"></i>正在接收针尖脉冲的阵元</li>
+          <li><i style="background:var(--clay)"></i>估计的针尖位置</li>
+        </ul>
+      </div>
+    </div>
+    <ul class="pubs reveal">
+      <li><span><a class="link" href="https://arxiv.org/abs/2509.11310" target="_blank" rel="noopener">Volumetric ultrasound imaging with a sparse matrix array and integrated fiber-optic sensing for robust needle tracking</a></span><span>IEEE Sensors Journal · 2026</span></li>
+      <li><span><a class="link" href="https://pubmed.ncbi.nlm.nih.gov/41880765/" target="_blank" rel="noopener">Multilateration-based needle tracking with 3D ultrasound imaging for guiding minimally invasive procedures</a></span><span>Physics in Medicine & Biology · 2026</span></li>
+      <li><span>Performance evaluation of a 3D ultrasound imaging and needle tip tracking system</span><span>IEEE EMBC · 2025</span></li>
+    </ul>
+    <p class="reveal" style="color:var(--muted);font-size:14px;margin-top:20px">共 6 篇第一作者、7 篇合作论文。完整列表见我的简历。</p>
+  </div>
+</section>
+
+
+<!-- Why me -->
+<section class="block" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Why me</h2><span class="label">从实验室到病床</span></div>
+    <div class="why-intro reveal">
+      <p class="big">很少有人同时站在高校实验室、医院、监管机构与市场的交汇处。我正工作在这片重叠地带。</p>
+      <p>我是一名转化研究者：我的工作，是把一个想法安全地送过从高校实验台到医院病床之间的鸿沟——这段路常被称作“死亡之谷”。它需要技术深度、临床验证、合规质量，以及一位创始人对“真正抵达患者需要什么”的直觉。</p>
+    </div>
+    <figure class="bridge-fig reveal" aria-label="动画：一个想法离开高校实验室，落入死亡之谷；随后 James 一块块地搭起桥——验证研究、流程整合、法规质量体系、试点部署、临床采用、真实世界证据——下一个想法便安全跨到医院病床。">
+      <svg id="bridge" viewBox="0 0 960 330" role="img">
+        <defs><linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" class="mist0"/><stop offset="100%" class="mist1"/></linearGradient></defs>
+        <path class="mist" d="M140 178 C 330 318 630 318 820 178 Z"/>
+        <text class="cap" x="480" y="40" text-anchor="middle" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.0036;0.0321;0.2357;0.2643;1.0000" values="0;0;1;1;0;0"/>大多数有前景的想法，从未走出高校实验室。</text><text class="cap" x="480" y="40" text-anchor="middle" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.2571;0.2857;0.5429;0.5714;1.0000" values="0;0;1;1;0;0"/>于是我搭桥——每次迈出一步，步步经过验证。</text><text class="cap" x="480" y="40" text-anchor="middle" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.5714;0.6000;0.9214;0.9500;1.0000" values="0;0;1;1;0;0"/>从实验台到病床——想法抵达患者。</text>
+        <g transform="translate(10,60)"><path class="emb" d="M62 84 V96 L52 116 Q50 122 58 122 H82 Q90 122 88 116 L78 96 V84"/><path class="emb" d="M58 84 H82"/></g>
+        <text class="endlabel" x="80" y="234" text-anchor="middle">高校实验室</text><text class="endsub" x="80" y="253" text-anchor="middle">实验台</text>
+        <circle class="clinic-glow" cx="880" cy="160" r="30" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.7857;0.8214;0.8929;0.9500;1.0000" values="0;0;.22;.22;0;0"/></circle>
+        <path class="emb" d="M857 181 V140 H903 V181"/><path class="emb" d="M848 181 H912"/><path class="emb" d="M880 147 V165 M871 156 H889"/><path class="emb" d="M875 181 V172 H885 V181"/>
+        <text class="endlabel" x="880" y="234" text-anchor="middle">医院</text><text class="endsub" x="880" y="253" text-anchor="middle">病床</text>
+        <path class="valley" d="M140 178 C 330 318 630 318 820 178"/>
+        <text class="gaplabel" x="480" y="300" text-anchor="middle">死亡之谷</text>
+        <path class="span" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" d="M150 168 Q480 126 810 168"><animate attributeName="stroke-dashoffset" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.2571;0.5286;0.9143;0.9714;1.0000" values="1;1;0;0;1;1"/></path>
+        <circle class="stone-glow" cx="196.0" cy="162.5" r="12" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.5936;0.6114;0.6650;1.0000" values="0;0;.45;0;0"/></circle><circle class="stone" cx="196.0" cy="162.5" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.2761;0.2940;0.3083;0.9143;0.9714;1.0000" values="0;0;6.5;5.5;5.5;0;0"/></circle><circle class="stone-dot" cx="196.0" cy="162.5" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.2761;0.2940;0.3083;0.9143;0.9714;1.0000" values="0;0;2.3;2;2;0;0"/></circle><text class="steplabel" x="203.0" y="179.5" transform="rotate(20 203.0 179.5)" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.2869;0.3190;0.9143;0.9714;1.0000" values="0;0;1;1;0;0"/>验证研究</text><circle class="stone-glow" cx="304.8" cy="152.9" r="12" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.6289;0.6468;0.7004;1.0000" values="0;0;.45;0;0"/></circle><circle class="stone" cx="304.8" cy="152.9" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.3209;0.3388;0.3531;0.9143;0.9714;1.0000" values="0;0;6.5;5.5;5.5;0;0"/></circle><circle class="stone-dot" cx="304.8" cy="152.9" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.3209;0.3388;0.3531;0.9143;0.9714;1.0000" values="0;0;2.3;2;2;0;0"/></circle><text class="steplabel" x="311.8" y="169.9" transform="rotate(20 311.8 169.9)" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.3316;0.3638;0.9143;0.9714;1.0000" values="0;0;1;1;0;0"/>流程整合</text><circle class="stone-glow" cx="413.8" cy="147.8" r="12" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.6643;0.6821;0.7357;1.0000" values="0;0;.45;0;0"/></circle><circle class="stone" cx="413.8" cy="147.8" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.3657;0.3836;0.3979;0.9143;0.9714;1.0000" values="0;0;6.5;5.5;5.5;0;0"/></circle><circle class="stone-dot" cx="413.8" cy="147.8" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.3657;0.3836;0.3979;0.9143;0.9714;1.0000" values="0;0;2.3;2;2;0;0"/></circle><text class="steplabel" x="420.8" y="164.8" transform="rotate(20 420.8 164.8)" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.3764;0.4086;0.9143;0.9714;1.0000" values="0;0;1;1;0;0"/>法规质量体系</text><circle class="stone-glow" cx="523.1" cy="147.4" r="12" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.6996;0.7175;0.7711;1.0000" values="0;0;.45;0;0"/></circle><circle class="stone" cx="523.1" cy="147.4" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.4105;0.4284;0.4426;0.9143;0.9714;1.0000" values="0;0;6.5;5.5;5.5;0;0"/></circle><circle class="stone-dot" cx="523.1" cy="147.4" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.4105;0.4284;0.4426;0.9143;0.9714;1.0000" values="0;0;2.3;2;2;0;0"/></circle><text class="steplabel" x="530.1" y="164.4" transform="rotate(20 530.1 164.4)" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.4212;0.4534;0.9143;0.9714;1.0000" values="0;0;1;1;0;0"/>试点部署</text><circle class="stone-glow" cx="632.1" cy="151.5" r="12" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.7350;0.7529;0.8064;1.0000" values="0;0;.45;0;0"/></circle><circle class="stone" cx="632.1" cy="151.5" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.4553;0.4731;0.4874;0.9143;0.9714;1.0000" values="0;0;6.5;5.5;5.5;0;0"/></circle><circle class="stone-dot" cx="632.1" cy="151.5" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.4553;0.4731;0.4874;0.9143;0.9714;1.0000" values="0;0;2.3;2;2;0;0"/></circle><text class="steplabel" x="639.1" y="168.5" transform="rotate(20 639.1 168.5)" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.4660;0.4981;0.9143;0.9714;1.0000" values="0;0;1;1;0;0"/>临床采用</text><circle class="stone-glow" cx="744.3" cy="160.5" r="12" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.7714;0.7893;0.8429;1.0000" values="0;0;.45;0;0"/></circle><circle class="stone" cx="744.3" cy="160.5" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.5014;0.5193;0.5336;0.9143;0.9714;1.0000" values="0;0;6.5;5.5;5.5;0;0"/></circle><circle class="stone-dot" cx="744.3" cy="160.5" r="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.5014;0.5193;0.5336;0.9143;0.9714;1.0000" values="0;0;2.3;2;2;0;0"/></circle><text class="steplabel" x="751.3" y="177.5" transform="rotate(20 751.3 177.5)" opacity="0"><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.5121;0.5443;0.9143;0.9714;1.0000" values="0;0;1;1;0;0"/>真实世界证据</text>
+        <g opacity="0">
+          <animateMotion dur="14s" repeatCount="indefinite" path="M150 168 Q480 126 810 168" keyPoints="0;0;1;1" keyTimes="0.0000;0.2571;0.5286;1.0000" calcMode="linear"/>
+          <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.2357;0.2571;0.5286;0.5571;1.0000" values="0;0;1;1;0;0"/>
+          <circle class="me-head" cx="0" cy="-20" r="5.5"/>
+          <path class="me-body" d="M-8.5 -4 C-8.5 -10 -4.5 -13 0 -13 C4.5 -13 8.5 -10 8.5 -4"/>
+        </g>
+        <circle class="splash" cx="334.8" cy="266.2" r="2" opacity="0"><animate attributeName="r" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.2143;0.2786;1.0000" values="2;2;20;20"/><animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.2129;0.2143;0.2786;1.0000" values="0;0;.7;0;0"/></circle>
+        <g opacity="0">
+          <animateMotion dur="14s" repeatCount="indefinite" path="M150 158 Q 250 60 334.8 266.2" keyPoints="0;0;1;1" keyTimes="0.0000;0.0857;0.2143;1.0000" calcMode="spline" keySplines="0 0 1 1;.45 0 .9 .6;0 0 1 1"/>
+          <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.0357;0.0643;0.2000;0.2286;1.0000" values="0;0;1;1;0;0"/>
+          <circle class="idea-glow" r="10" opacity=".18"/><circle class="idea" r="3.6"/>
+        </g>
+        <g opacity="0">
+          <animateMotion dur="14s" repeatCount="indefinite" path="M150 168 Q480 126 810 168" keyPoints="0;0;1;1" keyTimes="0.0000;0.5857;0.8000;1.0000" calcMode="spline" keySplines="0 0 1 1;.45 0 .55 1;0 0 1 1"/>
+          <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0.0000;0.5286;0.5571;0.8786;0.9143;1.0000" values="0;0;1;1;0;0"/>
+          <circle class="idea-glow" r="10" opacity=".18"/><circle class="idea" r="3.6"/>
+        </g>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<!-- Path -->
+<section class="block" id="path">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Path</h2><span class="label">荣誉与训练</span></div>
+    <div class="two-col">
+      <ul class="rows reveal">
+        <li><span class="y">2026</span><span>OYSS-MiniMax AI+ Hackathon<small>第一名</small></span></li>
+        <li><span class="y">2026</span><span>Cambridge RealityX Hackathon<small>赛道冠军</small></span></li>
+        <li><span class="y">2026</span><span>伦敦国王学院 3MT<small>总决赛</small></span></li>
+        <li><span class="y">2025</span><span>Global Innovation Show G-star<small>前 30</small></span></li>
+        <li><span class="y">2018</span><span>GM PACE<small>全球第一</small></span></li>
+      </ul>
+      <ul class="rows reveal">
+        <li><span class="y">2026</span><span>博士后，可信赖牙科 AI<small>Centre for Oral, Clinical & Translational Sciences, Guy’s Hospital, 伦敦国王学院</small></span></li>
+        <li><span class="y">2021</span><span>生物医学工程博士<small>School of Biomedical Engineering & Imaging Sciences, St Thomas’ Hospital, 伦敦国王学院</small></span></li>
+        <li><span class="y">2020</span><span><a class="link" href="https://www.imperial.ac.uk/study/courses/postgraduate-taught/medical-device-design/" target="_blank" rel="noopener">医疗器械设计与创业研究型硕士（MRes）</a><small>帝国理工学院 · 良好（Merit）</small></span></li>
+        <li><span class="y">2018</span><span>机械工程工学学士<small>伯明翰大学 · 一等荣誉</small></span></li>
+        <li><span class="y">2016</span><span>车辆工程工学学士<small>Wuhan University of Technology</small></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <div class="label">Contact</div>
+    <h2>让我们一起，打造真正惠及患者的东西。</h2>
+    <p>我很乐意与创始人、投资人、临床医生和研究者交流。</p>
+    <div class="actions">
+      <a class="btn" href="mailto:james.liang.sser@gmail.com">james.liang.sser@gmail.com</a>
+      <a class="link" href="https://www.linkedin.com/in/weidong-liang-0715111a3/" target="_blank" rel="noopener">LinkedIn</a>
+      <button class="link" type="button" data-cv style="background:none;border:none;border-bottom:1px solid var(--faint);font:inherit;color:inherit;cursor:pointer;padding:0 0 1px">索取简历</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Dr James Weidong Liang</span>
+    <span id="updated"></span>
+  </div>
+</footer>
+
+<!-- CV gate -->
+<dialog id="gate" aria-labelledby="gate-title">
+  <form class="gate" method="dialog" onsubmit="return false">
+    <div class="label">简历</div>
+    <h3 id="gate-title">稍作停留</h3>
+    <p>请长按圆圈以确认你是真人，确认后将立即开始下载。</p>
+    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="hold" type="button" id="hold" aria-label="长按以下载简历">
+      <svg viewBox="0 0 132 132" aria-hidden="true"><circle class="track" cx="66" cy="66" r="60"/><circle class="prog" id="prog" cx="66" cy="66" r="60"/></svg>
+      <span id="hold-text">长按</span>
+    </button>
+    <div class="status" id="gate-status" role="status"></div>
+    <div class="alt">或通过 <a class="link" href="mailto:james.liang.sser@gmail.com?subject=CV%20request">邮件</a> 索取。</div>
+    <button class="close" type="button" id="gate-close">关闭</button>
+  </form>
+</dialog>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Theme: auto (system) -> light -> dark
+  var root = document.documentElement, tbtn = document.getElementById('theme-btn');
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function getMode() { return root.getAttribute('data-theme') || 'auto'; }
+  function applyMode(m) {
+    if (m === 'auto') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', m);
+    try { if (m === 'auto') localStorage.removeItem('theme'); else localStorage.setItem('theme', m); } catch (e) {}
+    tbtn.setAttribute('data-mode', m);
+    var names = { auto: '跟随系统', light: '浅色', dark: '深色' };
+    tbtn.setAttribute('aria-label', '主题：' + names[m] + '。点击切换。');
+    tbtn.title = '主题：' + names[m];
+    document.dispatchEvent(new Event('themechange'));
+  }
+  tbtn.setAttribute('data-mode', getMode());
+  tbtn.title = '主题：' + (getMode() === 'auto' ? '跟随系统' : getMode());
+  tbtn.addEventListener('click', function () { var m = getMode(); applyMode(m === 'auto' ? 'light' : m === 'light' ? 'dark' : 'auto'); });
+  (mq.addEventListener ? mq.addEventListener('change', function () { document.dispatchEvent(new Event('themechange')); }) : mq.addListener(function () { document.dispatchEvent(new Event('themechange')); }));
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  try {
+    var d = new Date(document.lastModified);
+    if (!isNaN(d)) document.getElementById('updated').textContent = '更新于 ' + d.toLocaleDateString('zh-CN', { month: 'long', year: 'numeric' });
+  } catch (e) {}
+
+  // Reveal on scroll
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+  // Active nav link
+  var links = {}; document.querySelectorAll('#nav a').forEach(function (a) { links[a.hash.slice(1)] = a; });
+  var navIo = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting && links[e.target.id]) {
+        for (var k in links) links[k].classList.remove('active');
+        links[e.target.id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('main section[id]').forEach(function (s) { navIo.observe(s); });
+
+  /* ---------- Research animation: needle tip beacon tracked by a probe array ---------- */
+  var NS = 'http://www.w3.org/2000/svg';
+  var svg = document.getElementById('scan');
+  function paint(n, k, v) {
+    if (k === 'fill' || k === 'stroke') n.style.setProperty(k, v); else n.setAttribute(k, v);
+  }
+  function el(name, attrs, parent) {
+    var n = document.createElementNS(NS, name);
+    for (var k in attrs) paint(n, k, attrs[k]);
+    (parent || svg).appendChild(n); return n;
+  }
+  // Theme-tuned animation strength (stronger pulses on dark backgrounds)
+  var PK = 1;
+  function readTheme() { PK = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pulse-k')) || 1; }
+  readTheme();
+  document.addEventListener('themechange', readTheme);
+  var W = 600, H = 380, top = 56, mmPerPx = 0.12;
+  // tissue texture
+  for (var i = 0; i < 9; i++) el('line', { x1: 0, x2: W, y1: top + 30 + i * 36, y2: top + 30 + i * 36, stroke: 'var(--line)', 'stroke-width': 1 });
+  // probe
+  el('rect', { x: 110, y: 14, width: 380, height: 30, rx: 8, fill: 'var(--ink)', opacity: .9 });
+  var elems = [];
+  for (var j = 0; j < 16; j++) {
+    var x = 124 + j * 23.2;
+    elems.push({ x: x + 6, y: top - 10, node: el('rect', { x: x, y: 38, width: 12, height: 8, rx: 1.5, fill: 'var(--faint)' }) });
+  }
+  var rings = el('g', {});
+  var rays = el('g', {});
+  var needle = el('line', { x1: -20, y1: 120, x2: 0, y2: 0, stroke: 'var(--ink)', 'stroke-width': 2.4, 'stroke-linecap': 'round' });
+  var halo = el('circle', { r: 9, fill: 'var(--sage)', opacity: .15 });
+  var tip = el('circle', { r: 4, fill: 'var(--sage)' });
+  var cross = el('g', { stroke: 'var(--clay)', 'stroke-width': 1, opacity: .85 });
+  el('line', { x1: -14, x2: -6, y1: 0, y2: 0 }, cross); el('line', { x1: 6, x2: 14, y1: 0, y2: 0 }, cross);
+  el('line', { x1: 0, x2: 0, y1: -14, y2: -6 }, cross); el('line', { x1: 0, x2: 0, y1: 6, y2: 14 }, cross);
+
+  var readout = document.getElementById('readout');
+  var start = null, lastPulse = -1e9, pulses = [];
+  var entry = { x: 40, y: top + 20 };
+
+  function tipAt(t) {
+    // slow advance and partial retreat, with a slight lateral drift
+    var p = (1 - Math.cos(Math.min(t, 1) * Math.PI)) / 2;
+    return { x: 130 + p * 300 + Math.sin(t * 6.283) * 6, y: top + 60 + p * 200 };
+  }
+
+  function frame(now) {
+    if (!start) start = now;
+    var t = ((now - start) / 9000) % 2; t = t > 1 ? 2 - t : t;
+    var p = tipAt(t);
+    var dx = p.x - entry.x, dy = p.y - entry.y, len = Math.hypot(dx, dy);
+    needle.setAttribute('x1', p.x - dx / len * 520); needle.setAttribute('y1', p.y - dy / len * 520);
+    needle.setAttribute('x2', p.x); needle.setAttribute('y2', p.y);
+    tip.setAttribute('cx', p.x); tip.setAttribute('cy', p.y);
+    halo.setAttribute('cx', p.x); halo.setAttribute('cy', p.y);
+    cross.setAttribute('transform', 'translate(' + p.x + ',' + p.y + ')');
+
+    if (now - lastPulse > 1100) {
+      lastPulse = now;
+      pulses.push({ x: p.x, y: p.y, t0: now, node: el('circle', { cx: p.x, cy: p.y, r: 4, fill: 'none', stroke: 'var(--sage)', 'stroke-width': 1.2 }, rings), hit: {} });
+    }
+    pulses = pulses.filter(function (q) {
+      var r = (now - q.t0) * 0.22;
+      if (r > 520) { q.node.remove(); return false; }
+      q.node.setAttribute('r', r);
+      q.node.setAttribute('opacity', Math.min(1, Math.max(0, 0.75 - r / 600) * PK));
+      elems.forEach(function (e, k) {
+        if (!q.hit[k] && Math.hypot(e.x - q.x, e.y - q.y) <= r) {
+          q.hit[k] = 1; paint(e.node, 'fill', 'var(--sage)'); e.lit = now;
+        }
+      });
+      return true;
+    });
+    elems.forEach(function (e) { if (e.lit && now - e.lit > 260) { paint(e.node, 'fill', 'var(--faint)'); e.lit = 0; } });
+
+    // triangulation rays to three elements
+    while (rays.firstChild) rays.firstChild.remove();
+    [1, 8, 14].forEach(function (k) {
+      el('line', { x1: p.x, y1: p.y, x2: elems[k].x, y2: elems[k].y + 8, stroke: 'var(--clay)', 'stroke-width': .8, 'stroke-dasharray': '2 5', opacity: .7 }, rays);
+    });
+
+    readout.innerHTML = '追踪 · <b>x ' + ((p.x - 300) * mmPerPx).toFixed(1) + ' mm</b> · <b>深度 ' + ((p.y - top) * mmPerPx).toFixed(1) + ' mm</b>';
+    if (!reduce && visible) requestAnimationFrame(frame); else running = false;
+  }
+  var visible = false, running = false;
+  new IntersectionObserver(function (es) {
+    visible = es[0].isIntersecting;
+    if (visible && !running) { running = true; requestAnimationFrame(frame); }
+  }).observe(svg);
+  if (reduce) requestAnimationFrame(frame);
+
+
+  /* ---------- Fermat-spiral sparse array: elements light as the tip's pulse arrives ---------- */
+  (function () {
+    var sv = document.getElementById('spiral'); if (!sv) return;
+    var N = 256, cx = 220, cy = 214, R = 150, GA = Math.PI * (3 - Math.sqrt(5));
+    function mk(n, a, parent) { var e = document.createElementNS(NS, n); for (var k in a) paint(e, k, a[k]); (parent || sv).appendChild(e); return e; }
+    mk('rect', { x: cx - R - 22, y: cy - R - 22, width: 2 * R + 44, height: 2 * R + 44, rx: 26, fill: 'none', stroke: 'var(--line)', 'stroke-width': 1.2 });
+    mk('line', { x1: cx - R - 22, x2: cx + R + 22, y1: cy, y2: cy, stroke: 'var(--line)', 'stroke-width': 1 });
+    mk('line', { x1: cx, x2: cx, y1: cy - R - 22, y2: cy + R + 22, stroke: 'var(--line)', 'stroke-width': 1 });
+    // faint spiral guide through the first elements
+    var d = '';
+    for (var t = 0; t <= 40; t += 0.05) { var rr = R * Math.sqrt(t / 40) ; d += (t ? 'L' : 'M') + (cx + rr * Math.cos(t * 2.4)).toFixed(1) + ' ' + (cy + rr * Math.sin(t * 2.4)).toFixed(1); }
+    mk('path', { d: d, fill: 'none', stroke: 'var(--line)', 'stroke-width': 1 });
+    var els = [];
+    for (var n = 1; n <= N; n++) {
+      var r = R * Math.sqrt(n / N), th = n * GA;
+      var x = cx + r * Math.cos(th), y = cy + r * Math.sin(th);
+      els.push({ x: x, y: y, lvl: 0, node: mk('circle', { cx: x, cy: y, r: 3.2, fill: 'var(--faint)' }) });
+    }
+    var ring = mk('circle', { r: 0, fill: 'none', stroke: 'var(--sage)', 'stroke-width': 1, opacity: 0 });
+    var mark = mk('g', { stroke: 'var(--clay)', 'stroke-width': 1.4 });
+    mk('circle', { r: 7, fill: 'none' }, mark); mk('line', { x1: -13, x2: 13, y1: 0, y2: 0 }, mark); mk('line', { x1: 0, x2: 0, y1: -13, y2: 13 }, mark);
+    var ro = document.getElementById('spiral-readout');
+    var t0 = null, pulseAt = 0, src = { x: cx, y: cy, z: 60 }, PERIOD = 2400, SPEED = 0.16;
+    var vis = false, run = false;
+    function tipAt(ms) {
+      var a = ms / 7000;
+      return { x: cx + 70 * Math.cos(a * 2.1), y: cy + 55 * Math.sin(a * 2.9), z: 50 + 30 * Math.sin(a * 1.3) };
+    }
+    function step(now) {
+      if (!t0) t0 = now;
+      var el = now - t0;
+      if (el - pulseAt > PERIOD || pulseAt === 0) { pulseAt = el || 1; src = tipAt(el); }
+      var dt = el - pulseAt, front = dt * SPEED;
+      els.forEach(function (e) {
+        var arrive = Math.sqrt(Math.pow(e.x - src.x, 2) + Math.pow(e.y - src.y, 2) + src.z * src.z) - src.z;
+        var lvl = front >= arrive ? Math.max(0, 1 - (front - arrive) / 70) : 0;
+        if (Math.abs(lvl - e.lvl) > 0.02) {
+          e.lvl = lvl;
+          paint(e.node, 'fill', lvl > 0.05 ? 'var(--sage)' : 'var(--faint)');
+          e.node.setAttribute('r', (3.2 + lvl * 1.8).toFixed(2));
+          e.node.setAttribute('opacity', lvl > 0.05 ? (0.45 + 0.55 * lvl).toFixed(2) : 1);
+        }
+      });
+      ring.setAttribute('cx', src.x); ring.setAttribute('cy', src.y); ring.setAttribute('r', Math.max(0, front));
+      ring.setAttribute('opacity', Math.min(1, Math.max(0, 0.5 - front / 500) * PK).toFixed(2));
+      var settled = front > 260;
+      mark.setAttribute('transform', 'translate(' + src.x.toFixed(1) + ',' + src.y.toFixed(1) + ')');
+      mark.setAttribute('opacity', settled ? 1 : 0.25);
+      ro.innerHTML = '256 个阵元 · 黄金角 <b>137.5°</b>' + (settled ? ' · 针尖 <b>' + ((src.x - cx) * 0.1).toFixed(1) + ', ' + ((src.y - cy) * 0.1).toFixed(1) + ', ' + (src.z * 0.4).toFixed(1) + ' mm</b>' : ' · <b>聆听中……</b>');
+      if (!reduce && vis) requestAnimationFrame(step); else run = false;
+    }
+    new IntersectionObserver(function (es) { vis = es[0].isIntersecting; if (vis && !run) { run = true; requestAnimationFrame(step); } }).observe(sv);
+    if (reduce) requestAnimationFrame(step);
+  })();
+
+  /* ---------- SMIL scenes: start on first view, pause offscreen, freeze for reduced motion ---------- */
+  [['roles', 15], ['bridge', 10.4]].forEach(function (cfg) {
+    var sv = document.getElementById(cfg[0]); if (!sv || !sv.pauseAnimations) return;
+    sv.pauseAnimations();
+    if (reduce) { try { sv.setCurrentTime(cfg[1]); } catch (e) {} return; }
+    var started = false;
+    new IntersectionObserver(function (es) {
+      if (es[0].isIntersecting) { if (!started) { started = true; try { sv.setCurrentTime(0); } catch (e) {} } sv.unpauseAnimations(); }
+      else sv.pauseAnimations();
+    }, { rootMargin: '0px 0px -10% 0px' }).observe(sv);
+  });
+
+  /* ---------- CV gate: press-and-hold human check, then decrypt and download ---------- */
+  var gate = document.getElementById('gate'), hold = document.getElementById('hold'),
+      prog = document.getElementById('prog'), statusEl = document.getElementById('gate-status'),
+      holdText = document.getElementById('hold-text'), hp = gate.querySelector('.hp');
+  var C = 377, HOLD_MS = 1600, openedAt = 0, moved = false, holdStart = 0, raf = 0, done = false;
+
+  document.querySelectorAll('[data-cv]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      openedAt = performance.now(); moved = false; done = false; reset();
+      statusEl.textContent = ''; holdText.textContent = 'Hold';
+      gate.showModal();
+    });
+  });
+  document.getElementById('gate-close').addEventListener('click', function () { gate.close(); });
+  gate.addEventListener('click', function (e) { if (e.target === gate) gate.close(); });
+  ['pointermove', 'keydown', 'touchstart'].forEach(function (ev) { gate.addEventListener(ev, function () { moved = true; }, { passive: true }); });
+
+  function reset() { cancelAnimationFrame(raf); holdStart = 0; prog.style.transition = 'stroke-dashoffset .4s ease'; prog.style.strokeDashoffset = C; }
+  function begin(e) {
+    if (done) return;
+    if (e && e.type === 'keydown') { if (e.key !== ' ' && e.key !== 'Enter') return; if (e.repeat) return; e.preventDefault(); }
+    prog.style.transition = 'none'; holdStart = performance.now();
+    (function tick(now) {
+      var k = Math.min(1, (now - holdStart) / HOLD_MS);
+      prog.style.strokeDashoffset = C * (1 - k);
+      if (k < 1) raf = requestAnimationFrame(tick); else complete();
+    })(holdStart);
+  }
+  function end() { if (!done && holdStart) reset(); }
+  hold.addEventListener('pointerdown', function (e) { hold.setPointerCapture(e.pointerId); begin(e); });
+  hold.addEventListener('pointerup', end); hold.addEventListener('pointercancel', end); hold.addEventListener('pointerleave', end);
+  hold.addEventListener('keydown', begin); hold.addEventListener('keyup', end);
+  hold.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+
+  function complete() {
+    done = true; holdStart = 0;
+    if (hp.value || !moved || performance.now() - openedAt < 1500) {
+      statusEl.textContent = '无法验证，请重试。'; done = false; reset(); return;
+    }
+    holdText.textContent = '✓'; statusEl.textContent = '正在准备下载……';
+    decryptCV().then(function (blob) {
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = 'CV_Weidong_James_Liang.pdf';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+      statusEl.textContent = '感谢。下载已开始。';
+    }).catch(function () {
+      statusEl.innerHTML = '出了点问题，请 <a class="link" href="mailto:james.liang.sser@gmail.com?subject=CV%20request">给我发邮件</a>。';
+    });
+  }
+
+  // The CV is stored encrypted (AES-256-CBC, PBKDF2-SHA256) so it is not directly linkable or indexable.
+  function decryptCV() {
+    var pass = ['beacon', 'b1076dc2', 'e30d00ed', '25396f83'];
+    pass = pass[0] + '-' + pass.slice(1).join('');
+    return fetch('assets/cv.bin').then(function (r) { if (!r.ok) throw 0; return r.arrayBuffer(); }).then(function (buf) {
+      var bytes = new Uint8Array(buf), salt = bytes.slice(8, 16), data = bytes.slice(16);
+      return crypto.subtle.importKey('raw', new TextEncoder().encode(pass), 'PBKDF2', false, ['deriveBits'])
+        .then(function (k) { return crypto.subtle.deriveBits({ name: 'PBKDF2', salt: salt, iterations: 120000, hash: 'SHA-256' }, k, 384); })
+        .then(function (bits) {
+          var b = new Uint8Array(bits);
+          return crypto.subtle.importKey('raw', b.slice(0, 32), 'AES-CBC', false, ['decrypt'])
+            .then(function (key) { return crypto.subtle.decrypt({ name: 'AES-CBC', iv: b.slice(32, 48) }, key, data); });
+        });
+    }).then(function (pdf) { return new Blob([pdf], { type: 'application/pdf' }); });
+  }
+})();
+</script>
+</body>
+</html>
