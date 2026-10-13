@@ -145,6 +145,9 @@
   .shots .desk { width: 86%; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 30px 60px -30px var(--shadow-c); display: block; }
   .shots .phone { position: absolute; right: 0; bottom: 0; width: 22%; border-radius: 22px; border: 6px solid var(--bezel); box-shadow: 0 30px 50px -20px var(--shadow-c); }
   .shots.single .desk { width: 100%; }
+  a.shots { display: block; color: inherit; text-decoration: none; }
+  a.shots:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; border-radius: 12px; }
+  .product-cta { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
   .shot-placeholder { aspect-ratio: 16/9; border: 1px dashed var(--faint); border-radius: 10px; display: grid; place-items: center; color: var(--muted); font-size: 13px; background: var(--paper); }
   .small-projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; border-top: 1px solid var(--line); padding-top: 40px; }
   .small-projects h4 { font-family: Newsreader, serif; font-weight: 400; font-size: 21px; margin: 6px 0 6px; }
@@ -438,12 +441,15 @@
           <div class="label">Personal product · 2026</div>
           <h3 style="margin-top:10px">Good Die<span class="zh">善终</span></h3>
         </div>
-        <p>A calm space for saying what matters before it is too late: wishes, letters to loved ones and the people you trust, one small step at a time.</p>
+        <div class="product-cta">
+          <p>A calm space for saying what matters before it is too late: wishes, letters to loved ones and the people you trust, one small step at a time.</p>
+          <a class="btn" href="GoodDie-demo/" target="_blank" rel="noopener">Try the interactive demo <span aria-hidden="true">→</span></a>
+        </div>
       </div>
-      <div class="shots reveal">
-        <img class="desk" src="assets/gooddie-desktop.jpg" alt="Good Die desktop app: the Today page with a gentle prompt and a care plan" loading="lazy">
-        <img class="phone" src="assets/gooddie-phone.jpg" alt="Good Die mobile app: the Today screen" loading="lazy">
-      </div>
+      <a class="shots reveal" href="GoodDie-demo/" target="_blank" rel="noopener" aria-label="Open the Good Die interactive demo">
+        <img class="desk" src="assets/gooddie-demo-desktop.jpg" alt="Good Die demo: the 善终 seal logo beside two phone screens, the Journal page and the night-time Reflection page, on a pointillist ground" loading="lazy">
+        <img class="phone" src="assets/gooddie-demo-phone.jpg" alt="Good Die demo on a phone: the Today screen with a sunflower painting and three small steps" loading="lazy">
+      </a>
     </article>
 
     <article class="product">
