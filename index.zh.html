@@ -145,6 +145,9 @@
   .shots .desk { width: 86%; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 30px 60px -30px var(--shadow-c); display: block; }
   .shots .phone { position: absolute; right: 0; bottom: 0; width: 22%; border-radius: 22px; border: 6px solid var(--bezel); box-shadow: 0 30px 50px -20px var(--shadow-c); }
   .shots.single .desk { width: 100%; }
+  a.shots { display: block; color: inherit; text-decoration: none; }
+  a.shots:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; border-radius: 12px; }
+  .product-cta { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
   .shot-placeholder { aspect-ratio: 16/9; border: 1px dashed var(--faint); border-radius: 10px; display: grid; place-items: center; color: var(--muted); font-size: 13px; background: var(--paper); }
   .small-projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; border-top: 1px solid var(--line); padding-top: 40px; }
   .small-projects h4 { font-family: Newsreader, serif; font-weight: 400; font-size: 21px; margin: 6px 0 6px; }
@@ -438,12 +441,15 @@
           <div class="label">个人产品 · 2026</div>
           <h3 style="margin-top:10px">善终<span class="zh">Good Die</span></h3>
         </div>
-        <p>一个平静的空间，让你在为时已晚之前说出最重要的话：心愿、写给挚爱之人的信，以及你所信任的人——一步一个小小的脚印。</p>
+        <div class="product-cta">
+          <p>一个平静的空间，让你在为时已晚之前说出最重要的话：心愿、写给挚爱之人的信，以及你所信任的人——一步一个小小的脚印。</p>
+          <a class="btn" href="GoodDie-demo/" target="_blank" rel="noopener">打开交互演示 <span aria-hidden="true">→</span></a>
+        </div>
       </div>
-      <div class="shots reveal">
-        <img class="desk" src="assets/gooddie-desktop.jpg" alt="善终 桌面端：今天页面，带有温和的提示和一份关怀计划" loading="lazy">
-        <img class="phone" src="assets/gooddie-phone.jpg" alt="善终 手机端：今天界面" loading="lazy">
-      </div>
+      <a class="shots reveal" href="GoodDie-demo/" target="_blank" rel="noopener" aria-label="打开善终交互演示">
+        <img class="desk" src="assets/gooddie-demo-desktop.jpg" alt="善终演示：印章标志旁两部手机，分别是「记录」页和夜间的「回望」页，背景为点彩底纹" loading="lazy">
+        <img class="phone" src="assets/gooddie-demo-phone.jpg" alt="善终演示手机端：「今天」页，向日葵画作下列着三件小事" loading="lazy">
+      </a>
     </article>
 
     <article class="product">
