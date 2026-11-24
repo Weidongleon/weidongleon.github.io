@@ -134,6 +134,11 @@
   .venture .meta b { display: block; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: 18px; line-height: 1.25; letter-spacing: 0; color: var(--ink); margin-bottom: 4px; }
   .venture .meta b:not(:first-of-type) { margin-top: 16px; }
   .fig { font-family: Newsreader, serif; color: var(--ink); }
+  .subjects { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 14px 0 0; }
+  .subjects li { font-size: 12.5px; letter-spacing: .02em; color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; }
+  .proj { list-style: none; padding: 0; margin: 14px 0 0; }
+  .proj li { display: grid; grid-template-columns: 44px 1fr; gap: 10px; padding: 7px 0; font-size: 14.5px; color: var(--muted); border-top: 1px dashed var(--line); }
+  .proj li .y { font-variant-numeric: tabular-nums; color: var(--faint); font-size: 13px; padding-top: 1px; }
 
 
   /* Products */
@@ -317,6 +322,7 @@
       <a href="#building">Building</a>
       <a href="#making">Making</a>
       <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
       <a href="#why">Why me</a>
       <a href="#path">Path</a>
       <a href="#contact">Contact</a>
@@ -526,6 +532,46 @@
   </div>
 </section>
 
+
+<!-- Teaching -->
+<section class="block" id="teaching">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Teaching</h2><span class="label">教学、指导与辅导</span></div>
+    <ol class="ventures">
+      <li class="venture reveal">
+        <span class="n">01</span>
+        <div>
+          <h3>帝国理工学院</h3>
+          <p>担任研究生助教，参与本科工程课程的教学：带实验课和辅导课，帮学生调试代码和 CAD 模型，并和他们一起讲解习题。</p>
+          <ul class="subjects"><li>C++ 编程</li><li>CAD 设计</li><li>热力学</li></ul>
+        </div>
+        <div class="meta"><b>研究生助教</b>2020 – 2021</div>
+      </li>
+      <li class="venture reveal">
+        <span class="n">02</span>
+        <div>
+          <h3>伦敦国王学院</h3>
+          <p>读博期间，我辅导硕士生，并在 Photons+ Ultrasound Research Laboratory 指导硕士研究课题，带学生从课题设计、原型制作、实验一直到论文撰写。</p>
+          <ul class="proj">
+            <li><span class="y">2024</span><span>Sonic Needle：集成光声信标、可追踪的微创手术穿刺针</span></li>
+            <li><span class="y">2023</span><span>可定制有效面积的 PVDF 针尖追踪阵列的制作</span></li>
+            <li><span class="y">2022</span><span>用于公众科普展示的手术器械辅助追踪演示系统</span></li>
+          </ul>
+        </div>
+        <div class="meta"><b>硕士课题指导</b>2022 – 2024<b>硕士生辅导</b>2021 – 2025</div>
+      </li>
+      <li class="venture reveal">
+        <span class="n">03</span>
+        <div>
+          <h3>LeaderUK</h3>
+          <p>担任远程研究生导师，为准备就读或正在就读英国学位课程的学生讲授大学工程课程。</p>
+          <ul class="subjects"><li>电子电气工程（EEE）</li><li>生物医学工程</li></ul>
+        </div>
+        <div class="meta"><b>研究生导师</b>2022 – 至今</div>
+      </li>
+    </ol>
+  </div>
+</section>
 
 <!-- Why me -->
 <section class="block" id="why">

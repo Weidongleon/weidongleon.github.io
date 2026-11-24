@@ -134,6 +134,11 @@
   .venture .meta b { display: block; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: 18px; line-height: 1.25; letter-spacing: 0; color: var(--ink); margin-bottom: 4px; }
   .venture .meta b:not(:first-of-type) { margin-top: 16px; }
   .fig { font-family: Newsreader, serif; color: var(--ink); }
+  .subjects { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 14px 0 0; }
+  .subjects li { font-size: 12.5px; letter-spacing: .02em; color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; }
+  .proj { list-style: none; padding: 0; margin: 14px 0 0; }
+  .proj li { display: grid; grid-template-columns: 44px 1fr; gap: 10px; padding: 7px 0; font-size: 14.5px; color: var(--muted); border-top: 1px dashed var(--line); }
+  .proj li .y { font-variant-numeric: tabular-nums; color: var(--faint); font-size: 13px; padding-top: 1px; }
 
 
   /* Products */
@@ -317,6 +322,7 @@
       <a href="#building">Building</a>
       <a href="#making">Making</a>
       <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
       <a href="#why">Why me</a>
       <a href="#path">Path</a>
       <a href="#contact">Contact</a>
@@ -526,6 +532,46 @@
   </div>
 </section>
 
+
+<!-- Teaching -->
+<section class="block" id="teaching">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Teaching</h2><span class="label">Teaching, supervision &amp; tutoring</span></div>
+    <ol class="ventures">
+      <li class="venture reveal">
+        <span class="n">01</span>
+        <div>
+          <h3>Imperial College London</h3>
+          <p>As a Graduate Teaching Assistant, I supported undergraduate engineering teaching in programming, design and thermal sciences: running lab and tutorial sessions, helping students debug code and CAD models, and working through problem sets with them.</p>
+          <ul class="subjects"><li>C++ programming</li><li>CAD design</li><li>Thermodynamics</li></ul>
+        </div>
+        <div class="meta"><b>Graduate Teaching Assistant</b>2020 – 2021</div>
+      </li>
+      <li class="venture reveal">
+        <span class="n">02</span>
+        <div>
+          <h3>King’s College London</h3>
+          <p>During my PhD I tutored MSc students and supervised MSc research projects in the Photons+ Ultrasound Research Laboratory, guiding students from project design through prototyping, experiments and thesis writing.</p>
+          <ul class="proj">
+            <li><span class="y">2024</span><span>Sonic Needle: a trackable needle with an integrated photoacoustic beacon for minimally invasive procedures</span></li>
+            <li><span class="y">2023</span><span>Fabrication of a customisable active-area PVDF needle-tracking array</span></li>
+            <li><span class="y">2022</span><span>A public engagement demonstration system for assisted tracking of surgical instruments</span></li>
+          </ul>
+        </div>
+        <div class="meta"><b>MSc Project Supervisor</b>2022 – 2024<b>MSc Student Tutor</b>2021 – 2025</div>
+      </li>
+      <li class="venture reveal">
+        <span class="n">03</span>
+        <div>
+          <h3>LeaderUK</h3>
+          <p>As a remote graduate tutor, I teach university-level engineering courses to students preparing for and studying on UK degree programmes.</p>
+          <ul class="subjects"><li>Electrical &amp; Electronic Engineering</li><li>Biomedical Engineering</li></ul>
+        </div>
+        <div class="meta"><b>Graduate Tutor</b>2022 – now</div>
+      </li>
+    </ol>
+  </div>
+</section>
 
 <!-- Why me -->
 <section class="block" id="why">
